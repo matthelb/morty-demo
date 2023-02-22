@@ -1,0 +1,58 @@
+syntax = "proto2";
+
+import "store/common/common-proto.proto";
+
+package strongstore.proto;
+
+message GetMessage {
+  required bytes key = 1;
+  optional TimestampMessage timestamp = 2;
+}
+
+message PutMessage {
+  required bytes key = 1;
+  required bytes val = 2;
+  optional TimestampMessage timestamp = 3;
+}
+
+message PrepareMessage {
+  required TransactionMessage txn = 1;
+  optional TimestampMessage timestamp = 2;
+}
+
+message CommitMessage {
+  required TimestampMessage timestamp = 1;
+}
+
+message AbortMessage {
+  required TransactionMessage txn = 1;
+}
+
+message Request {
+   enum Operation {
+      GET = 1;
+      PUT = 2;
+      PREPARE = 3;
+      COMMIT = 4;
+      ABORT = 5;
+   }	
+   required Operation op = 1;
+   required uint64 txnid = 2;
+   optional uint64 reqid = 3;
+   optional GetMessage get = 4;
+   optional PutMessage put = 5;
+   optional PrepareMessage prepare = 6;
+   optional CommitMessage commit = 7;
+   optional AbortMessage abort = 8;
+}
+
+message Reply {
+   // 0 = OK
+   // -1 = failed
+   // -2 = retry
+   // -3 = abstain/no reply
+   required int32 status = 1;
+   optional bytes value = 2;
+   optional TimestampMessage timestamp = 3;
+   optional uint64 reqid = 4;
+}

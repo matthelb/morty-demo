@@ -1,0 +1,117 @@
+.obj/
+bin/
+
+.DS_Store
+
+lib/crypto_bench
+lib/batched_sigs_test
+lib/blake3_test
+lib/threadpool_test
+lockserver/client-main
+lockserver/server-main
+lockserver/lockserver-repl
+store/benchmark/benchClient
+store/benchmark/retwisClient
+store/benchmark/terminalClient
+store/server
+store/benchmark/ping_client
+store/benchmark/ping_server
+store/benchmark/benchmark
+store/benchmark/benchmark_oneshot
+store/benchmark/tpcc/tpcc_generator
+store/benchmark/tpcc/tpcc_trace
+store/benchmark/smallbank/smallbank_generator_main
+store/benchmark/smallbank/smallbank_generator
+store/benchmark/smallbank/smallbank_client
+store/benchmark/smallbank/smallbank_data
+store/benchmark/smallbank/smallbank_names
+store/benchmark/smallbank/tests/amalgamate_test
+store/benchmark/smallbank/tests/bal_test
+store/benchmark/smallbank/tests/deposit_test
+store/benchmark/smallbank/tests/smallbank_utils_test
+store/benchmark/smallbank/tests/transact_test
+store/benchmark/smallbank/tests/write_check_test
+store/benchmark/smallbank/tests/smallbank_client_test
+store/benchmark/smallbank/tests/smallbank_generator_test
+timeserver/timeserver
+
+lib/threadpool_test
+lib/tests/configuration-test
+lib/tests/simtransport-test
+lockserver/tests/lockserver-test
+replication/ir/tests/ir-test
+replication/vr/tests/vr-test
+store/benchmark/common/tests/key-selector-test
+store/common/backend/tests/kvstore-test
+store/common/backend/tests/lockserver-test
+store/common/backend/tests/versionstore-test
+store/indicusstore/tests/common-test
+store/indicusstore/tests/server-test
+store/indicusstore/proto_bench
+store/janusstore/tests/janus-client-test
+store/janusstore/tests/janus-server-test
+store/mortystore/tests/branch-generator-test
+store/mortystore/tests/branch-compatible-test
+store/mortystore/tests/server-test
+store/pbftstore/testclient
+store/pbftstore/testserver
+store/spannerstore/tests/spanner-test
+
+bft_tapir/replica
+bft_tapir/client
+create_keys/create_key
+keys
+
+################################################################################
+# vim
+################################################################################
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+
+################################################################################
+# c++
+################################################################################
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

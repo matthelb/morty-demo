@@ -1,0 +1,10 @@
+BasedOnStyle:  Google
+
+IncludeBlocks: Regroup
+IncludeCategories:
+- Regex: '^<*.*\.h>'
+  Priority: 100
+- Regex: '^<[^/]*>'
+  Priority: 200
+- Regex: '^\"'
+  Priority: 300
